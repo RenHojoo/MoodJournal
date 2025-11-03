@@ -5,12 +5,16 @@
     <link rel="icon" type="image/png" href="assets/icon-Drhcwg3O.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mood Journal</title>
-    <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" crossorigin href="assets/index-B-iCJpsr.css">
+    <!-- Manifest -->
+    <link rel="manifest" href="/moodjournal/manifest.json" />
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" crossorigin href="assets/index-B-iCJpsr.css" />
     <script type="module" crossorigin src="assets/index-eet7pQuF.js"></script>
+    <!-- Register Service Worker -->
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js')
+        navigator.serviceWorker
+          .register('/moodjournal/sw.js')
           .then(() => console.log('Service Worker registered'))
           .catch(console.error);
       }
